@@ -264,85 +264,206 @@ html {
 }
 
 body {
+  margin: 0;
+  padding: 0;
+  /* make it look decent enough */
+  background: #232323;
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  width: 95%;
+  z-index: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease;
+}
+
+#menuToggle a:hover {
+  color: #3b8bc0;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+/*
+  * Just a quick hamburger
+  */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  -webkit-transform-origin: 4px 0px;
+          transform-origin: 4px 0px;
+  -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menuToggle span:first-child {
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+}
+
+/* 
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  -webkit-transform: rotate(45deg) translate(-2px, -1px);
+          transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+  * But let's hide the middle one.
+  */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+          transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+  * Oh yeah and the last one should go the other direction
+  */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  -webkit-transform: rotate(-45deg) translate(0, -1px);
+          transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+#menu {
+  position: absolute;
+  width: 100%;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  opacity: 0.9;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+  -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: -webkit-transform 0.7s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.7s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.7s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.7s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 3rem;
+}
+
+/*
+  * And let's slide it in from the left
+  */
+#menuToggle input:checked ~ ul {
+  -webkit-transform: none;
+          transform: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.email-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#name, #email, textarea {
+  width: 75%;
+}
+
+form {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding-top: 1rem;
+  background: blue;
+  margin-bottom: 2rem;
+}
+
+form input, form textarea {
+  margin: 0.5rem;
+}
+
+body {
   background: black;
   position: relative;
 }
 
-.wrapper {
-  padding: 0 2rem;
-}
-
 html {
   color: white;
-}
-
-.menu {
-  background: skyblue;
-  display: inline-block;
-  border-radius: 15px;
-  margin: 1rem;
-  position: absolute;
-  padding: 10px;
-  cursor: pointer;
-  right: 0;
-}
-
-.circle {
-  height: 25px;
-  width: 25px;
-  position: relative;
-}
-
-.line {
-  position: absolute;
-  width: 100%;
-  height: 5px;
-  background: white;
-  border-radius: 10px;
-  -webkit-transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.5s;
-  transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.5s;
-}
-
-.top {
-  top: 10%;
-}
-
-.middle {
-  top: 40%;
-}
-
-.bottom {
-  top: 70%;
-}
-
-.icon.close .top {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  top: 40%;
-}
-
-.icon.close .middle, .icon.close .bottom {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  top: 40%;
-}
-
-.list {
-  background: skyblue;
-}
-
-a {
-  list-style-type: none;
-  padding: 4px 2px;
-  text-decoration: none;
-}
-
-li {
-  list-style-type: none;
-}
-
-.active {
-  display: none;
 }
 
 .landing {
@@ -358,8 +479,6 @@ li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100vw;
-  height: 100vh;
 }
 
 .title {
@@ -394,9 +513,9 @@ h2 {
   height: 40rem;
 }
 
-img {
-  width: 75%;
-  height: 75%;
+.portrait {
+  width: 60%;
+  height: 80%;
   -webkit-box-shadow: 25px 25px 10px 0px #e8e7f0;
           box-shadow: 25px 25px 10px 0px #e8e7f0;
   border-radius: 100px;
@@ -420,4 +539,48 @@ img {
 
 h3, .about-info p {
   background: skyblue;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  z-index: -10;
+}
+
+i {
+  font-size: 6rem;
+}
+
+li {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+li p {
+  text-align: center;
+}
+
+.laptop {
+  width: 40%;
+  height: 40%;
+}
+
+.phone {
+  width: 25%;
+  height: 25%;
+}
+
+.knowledge {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }

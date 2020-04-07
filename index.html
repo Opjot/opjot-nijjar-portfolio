@@ -6,30 +6,30 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <link rel="stylesheet" href="./styles/style.css">
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:200,300' rel='stylesheet' type='text/css'>
+    <script src="https://kit.fontawesome.com/6d147b1c7d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
     <title>Opjot S. Nijjar</title>
 </head>
 <body>
   <section class="wrapper">
-    <header>
+    <header id="particles-js"> 
       <section>
-        <div class="menu">
-          <div class="circle icon">
-            <span class="line top"></span>
-            <span class="line middle"></span>
-            <span class="line bottom"></span>
-          </div>
-          <div class="list active">
-            <nav>
-              <ul>
-                <a href="#"><li>Home</li></a> 
-                <a href=""><li>About</li></a>
-                <a href=""><li>Skills</li></a>
-                <a href=""><li>Projects</li></a>
-                <a href=""><li>Contact</li></a>
+        <nav role="navigation">
+          <div id="menuToggle">
+              <input type="checkbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+              <ul id="menu">
+                <a href="#"><li>Home</li></a>
+                <a href="#"><li>About</li></a>
+                <a href="#"><li>skills</li></a>
+                <a href="#"><li>Projects</li></a>
+                <a href="#"><li>Contact</li></a>
               </ul>
-            </nav>
           </div>
-        </div>  
+        </nav>
       </section>
       <section class="landing">
         <div class="title">
@@ -42,61 +42,162 @@
       <section class="about">
         <div class="about-info"> 
           <h3>About Me</h3>
-          <p>Hello, my name is Opjot, I am front-end developer based out of Toronto. As a developer I stride to create web applications & websites that allow for the best possible user experience. I began coding in 2019 and have come so far from where I started. Prior to entering the coding world, I obtained a degree from York University in Business commerce (majoring in Marketing) and a post graduate certificate in Accounting.  </p>
+          <p>Hello, my name is Opjot, I am front-end developer based out of Toronto. As a developer I stride to create web applications & websites that allow for the best possible user experience. I began coding in 2019 and have come so far from where I started. Prior to entering the coding world, I obtained a degree from York University in Business commerce (majoring in Marketing) and a post graduate certificate in Accounting.</p>
+          <p>When I'm not coding or learning new concepts, I enjoy working with music, playing team sports, and travelling the world. I have been playing percussion instruments since grade 6 band, but have recently taken up mixing. Sports have been a part of my life for as long as I can remember, I am always down for almost any sport. Do I really have to explain the last one, who doesn't like travelling and exploring this wonderful world.</p>
         </div>
         <div class="about-pic">
-          <img src="./assets/opjot.jpeg" alt="">
+          <img class="portrait" src="./assets/opjot.jpeg" alt="">
         </div>
       </section>
-      <section class="skills">
+      <section id="skills">
         <h3>skills</h3>
-        <ul>
-          <li>
-            <i></i>
+        <ul class="knowledge">
+          <li class="skill">
+            <i class="fab fa-html5 "></i>
             <p>HTML5</p>
           </li>
-          <li>
-            <i></i>
+          <li class="skill">
+            <i class="fab fa-css3-alt "></i>
             <p>CSS3</p>
           </li>
-          <li>
-            <i></i>
+          <li class="skill">
+            <i class="fab fa-sass "></i>
             <p>SASS</p>
           </li>
-          <li>
-            <i></i>
+          <li class="skill">
+            <i class="fab fa-js-square "></i>
             <p>JavaScript</p>
           </li>
-          <li>
-            <i></i>
+          <li class="skill">
+            <i class="devicon-jquery-plain"></i>
             <p>jQuery</p>
           </li>
-          <li>
-            <i></i>
+          <li class="skill">
+            <i class="fab fa-react "></i>
             <p>React</p>
           </li>
-          <li>
-            <i></i>
+          <li class="skill">
+            <i class="fab fa-github-square "></i>
             <p>GitHub</p>
           </li>
-          <li>
-            <i></i>
+          <li class="skill">
+            <i class="fab fa-git-alt "></i>
             <p>Git</p>
           </li>
-          <li>
-            <i></i>
+          <li class="skill">
+            <i class="fas fa-mobile-alt "></i>
             <p>Responsive Design</p>
           </li>
-          <li>
-            <i></i>
+          <li class="skill">
+            <i class="fas fa-universal-access "></i>
             <p>Web Accessibility</p>
           </li>
-          <li></li>
         </ul>
       </section>
-    </main>
+      <section id="projects">
+        <h3>Projects</h3>
+        <div>
+          <div class="project-pics">
+          <img class="laptop" src="./assets/mockup/flick-picker-laptop.png" alt="Mockup of Quick Flick Picker app on a laptop screen.">
+          <img class="phone" src="./assets/mockup/flick-picker-phone.png" alt="Mockup of Quick Flick Picker app on a phone screen.">
+          </div>
+          <div class="project-info">
+            <h4>Quick Flick Picker</h4>
+            <p>| React | Firebase | Axios | CSS3 |</p>
+            <p> A web application created using React. My team was able to utilize the Movie DB Api and firebase to create this app to help you decide which movie you should watch based on genre and the amount of time available.</p>
+            <div>
+              <button>LIVE SITE</button>
+              <button>GITHUB</button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="project-pics">
+            <img class="laptop" src="./assets/mockup/teamify-laptop.png" alt="Mockup of Teamify app on a laptop screen.">
+            <img class="phone" src="./assets/mockup/teamify-phone.png" alt="Mockup of Teamify app on a phone screen.">
+          </div>
+          <div class="project-info">
+            <h4>Teamify</h4>
+            <p>| React | Firebase | SASS | CSS3 |</p>
+            <p>A fully responsive web application that uses react and firebase to help you create two teams to play basketball  or for family game night.</p>
+            <div>
+              <button>LIVE SITE</button>
+              <button>GITHUB</button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="project-pics">
+            <img class="laptop" src="./assets/mockup/bingo-laptop.png" alt="Mockup of Juno Bingo app on a laptop screen.">
+            <img class="phone" src="./assets/mockup/bingo-phone.png" alt="Mockup of Juno Bingo app on a phone screen.">
+          </div>
+          <div class="project-info">
+            <h4>Juno Bingo</h4>
+            <p>| Jquery | SASS | CSS3 | HTML5 |</p>
+            <p>A fully responsive two player game where you have to match the numbers on your randomly generated card to the random numbers being called. The winner gets bragging rights over their opponent!</p>
+            <div>
+              <button>LIVE SITE</button>
+              <button>GITHUB</button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="project-pics">
+            <img class="laptop" src="./assets/mockup/hp-laptop.png" alt="Mockup of Harry Potter Quiz app on a laptop screen.">
+            <img class="phone" src="./assets/mockup/hp-phone.png" alt="Mockup of Harry Potter Quiz app on a phone screen.">
+          </div>
+          <div class="project-info">
+            <h4>Harry Potter Quiz</h4>
+            <p>| Jquery | CSS3 | HTML5 |</p>
+            <p>A fully responsive Harry Potter quiz to test the knowledge of all the wizards out there.</p>
+            <div>
+              <button>LIVE SITE</button>
+              <button>GITHUB</button>
+            </div>
+          </div>
+        </div>
+          <div>
+            <div class="project-pics">
+            <img class="laptop" src="./assets/mockup/willow-laptop.png" alt="Mockup of Willow website on a laptop screen.">
+            <img class="phone" src="./assets/mockup/willow-phone.png" alt="Mockup of Willow website on a laptop screen.">
+          </div>
+          <div class="project-info">
+            <h4>Willow</h4>
+            <p>| HTML5 | CSS3 | SASS |</p>
+            <p>A fully responsive multi-page PSD conversion for Willow. This greenery themed static website uses SASS and HTML to tell you more about Willow.</p>
+            <div>
+              <button>LIVE SITE</button>
+              <button>GITHUB</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="email-form">
+          <h3>Contact Me</h3>
+          <form action="https://formspree.io/mknvrakp" method="POST">
+          
+            <label for="name"></label>
+            <input type="text" id="name" name="name" placeholder="Name">
+          
+            <label for="email"></label>
+            <input type="text" id="email" name="email" placeholder="Email">
+          
+            <label for="message"></label>
+            <textarea id="message" name="message" placeholder="Write a message..." style="height:300px"></textarea>
 
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright &#9400; 2020 Opjot S. Nijjar</p>
+    </footer>
   </section>
+  <script src="./particles.js"></script>
+  <script src="./app.js"></script>
+  <script src="./script.js"></script>
 </body>
-<script src="./script.js"></script>
+
 </html>

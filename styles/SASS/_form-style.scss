@@ -1,0 +1,32 @@
+$base-color:skyblue;
+$text-color: white;
+$background-color: black;
+
+.email-form{
+    // background:red;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+
+}
+
+#name, #email, textarea{
+    width:75%
+}
+
+form{
+    width:50%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    align-content:center;
+    padding-top:1rem;
+    background: blue;
+    margin-bottom: 2rem
+
+}
+
+form input, form textarea{
+    margin:0.5rem;
+
+}
