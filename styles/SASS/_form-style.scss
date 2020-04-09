@@ -1,9 +1,9 @@
-$base-color:skyblue;
+$base-color:#3b8bc0;
 $text-color: white;
 $background-color: black;
 
+
 .email-form{
-    // background:red;
     display:flex;
     flex-direction:column;
     align-items: center;
@@ -21,12 +21,48 @@ form{
     align-items: center;
     align-content:center;
     padding-top:1rem;
-    background: blue;
-    margin-bottom: 2rem
-
+    background:$base-color;
+    margin-bottom: 2rem;
+    border-radius:5rem
 }
 
 form input, form textarea{
     margin:0.5rem;
 
+}
+
+form .links a i{
+    font-size:3rem;
+    padding:0.2rem;
+    color:$text-color
+}
+
+form .links a i:hover{
+    color:$base-color;
+    background:$text-color;
+}
+
+.links{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    width:50%
+}
+
+form p{
+    font-size: 1.5rem;
+    margin-bottom:0.5rem
+}
+
+.send-email{
+    font-size: 1.2rem;
+    padding:0.5rem 2rem;
+    border-radius:10rem;
+    margin:1rem 0 2rem;
+    background: $text-color;
+}
+
+.copyright{
+    text-align:center;
+    font-size: 1rem;
 }

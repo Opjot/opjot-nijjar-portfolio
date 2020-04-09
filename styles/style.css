@@ -263,10 +263,103 @@ html {
   overflow: hidden;
 }
 
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+div,
+section,
+img,
+header,
+footer {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: black;
+  position: relative;
+}
+
+html {
+  color: white;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  z-index: -10;
+}
+
+#skills, #projects {
+  padding: 0 5rem;
+}
+
+h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  -webkit-text-decoration: underline white;
+          text-decoration: underline white;
+  background: #3b8bc0;
+  opacity: 0.8;
+  border-radius: 10rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.landing {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.title {
+  text-align: center;
+  background: #3b8bc0;
+  padding: 5rem 0;
+  border-radius: 10rem;
+  width: 60%;
+  opacity: 0.9;
+}
+
+.title:hover {
+  border: 3px dotted #3b8bc0;
+  color: #3b8bc0;
+  background: rgba(0, 0, 0, 0);
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
 body {
   margin: 0;
   padding: 0;
-  /* make it look decent enough */
   background: #232323;
   color: #cdcdcd;
   font-family: "Avenir Next", "Avenir", sans-serif;
@@ -274,9 +367,9 @@ body {
 
 #menuToggle {
   display: block;
-  position: relative;
-  top: 50px;
-  left: 50px;
+  position: fixed;
+  top: 25px;
+  left: 25px;
   width: 95%;
   z-index: 1;
   -webkit-user-select: none;
@@ -305,15 +398,10 @@ body {
   left: -5px;
   cursor: pointer;
   opacity: 0;
-  /* hide this */
   z-index: 2;
-  /* and place it over the hamburger */
   -webkit-touch-callout: none;
 }
 
-/*
-  * Just a quick hamburger
-  */
 #menuToggle span {
   display: block;
   width: 33px;
@@ -341,10 +429,6 @@ body {
           transform-origin: 0% 100%;
 }
 
-/* 
-  * Transform all the slices of hamburger
-  * into a crossmark.
-  */
 #menuToggle input:checked ~ span {
   opacity: 1;
   -webkit-transform: rotate(45deg) translate(-2px, -1px);
@@ -352,27 +436,17 @@ body {
   background: #232323;
 }
 
-/*
-  * But let's hide the middle one.
-  */
 #menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   -webkit-transform: rotate(0deg) scale(0.2, 0.2);
           transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
-  * Oh yeah and the last one should go the other direction
-  */
 #menuToggle input:checked ~ span:nth-last-child(2) {
   -webkit-transform: rotate(-45deg) translate(0, -1px);
           transform: rotate(-45deg) translate(0, -1px);
 }
 
-/*
-  * Make this absolute positioned
-  * at the top left of the screen
-  */
 #menu {
   position: absolute;
   width: 100%;
@@ -383,7 +457,6 @@ body {
   background: #ededed;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
   -webkit-transform-origin: 0% 0%;
           transform-origin: 0% 0%;
   -webkit-transform: translate(-100%, 0);
@@ -399,9 +472,6 @@ body {
   font-size: 3rem;
 }
 
-/*
-  * And let's slide it in from the left
-  */
 #menuToggle input:checked ~ ul {
   -webkit-transform: none;
           transform: none;
@@ -415,6 +485,196 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 10rem;
+}
+
+.about-pic, .about-info {
+  width: 50%;
+  height: 100%;
+}
+
+.portrait {
+  width: 60%;
+  height: 80%;
+  -webkit-box-shadow: 25px 25px 10px 0px #e8e7f0;
+          box-shadow: 25px 25px 10px 0px #e8e7f0;
+  border-radius: 100px;
+}
+
+.about-pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 10rem;
+}
+
+.about-info {
+  padding: 0 5rem 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info-p {
+  background: #3b8bc0;
+  opacity: 0.8;
+  border-radius: 10rem;
+  padding: 5rem 2rem 4rem;
+}
+
+.info-p p {
+  padding: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.skill {
+  width: 20rem;
+  height: 15rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+i {
+  font-size: 6rem;
+}
+
+.skill i:hover {
+  color: #3b8bc0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+li p {
+  text-align: center;
+}
+
+.knowledge {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+h4 {
+  font-size: 2.5rem;
+  -webkit-text-decoration: underline #3b8bc0;
+          text-decoration: underline #3b8bc0;
+}
+
+.laptop {
+  width: 75%;
+  height: 100%;
+}
+
+.phone {
+  width: 35%;
+  height: 45%;
+  position: relative;
+  right: 5rem;
+  top: 8rem;
+}
+
+.project-pics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.project-pics, .project-info {
+  width: 50%;
+}
+
+.project-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tools {
+  margin: 1rem 0  0;
+  font-size: 1.5rem;
+  color: #3b8bc0;
+}
+
+.explanation {
+  margin: 1rem 0 2rem;
+  font-size: 1.2rem;
+}
+
+.project-buttons button {
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 10rem;
+  margin: 0 1rem;
+  background: #3b8bc0;
 }
 
 .email-form {
@@ -449,56 +709,27 @@ form {
   -ms-flex-line-pack: center;
       align-content: center;
   padding-top: 1rem;
-  background: blue;
+  background: #3b8bc0;
   margin-bottom: 2rem;
+  border-radius: 5rem;
 }
 
 form input, form textarea {
   margin: 0.5rem;
 }
 
-body {
-  background: black;
-  position: relative;
-}
-
-html {
+form .links a i {
+  font-size: 3rem;
+  padding: 0.2rem;
   color: white;
 }
 
-.landing {
-  width: 100vw;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+form .links a i:hover {
+  color: #3b8bc0;
+  background: white;
 }
 
-.title {
-  text-align: center;
-  background: skyblue;
-  margin: 0 25rem;
-  padding: 3rem 0;
-  border-radius: 100px;
-}
-
-h1 {
-  font-size: 4rem;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-top: 2rem;
-}
-
-.about {
+.links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -506,81 +737,26 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-}
-
-.about-pic, .about-info {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 50%;
-  height: 40rem;
 }
 
-.portrait {
-  width: 60%;
-  height: 80%;
-  -webkit-box-shadow: 25px 25px 10px 0px #e8e7f0;
-          box-shadow: 25px 25px 10px 0px #e8e7f0;
-  border-radius: 100px;
+form p {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.about-pic {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.send-email {
+  font-size: 1.2rem;
+  padding: 0.5rem 2rem;
+  border-radius: 10rem;
+  margin: 1rem 0 2rem;
+  background: white;
 }
 
-.about-info {
-  padding: 5rem;
-}
-
-h3, .about-info p {
-  background: skyblue;
-}
-
-canvas {
-  position: absolute;
-  top: 0;
-  z-index: -10;
-}
-
-i {
-  font-size: 6rem;
-}
-
-li {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-li p {
+.copyright {
   text-align: center;
-}
-
-.laptop {
-  width: 40%;
-  height: 40%;
-}
-
-.phone {
-  width: 25%;
-  height: 25%;
-}
-
-.knowledge {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  font-size: 1rem;
 }

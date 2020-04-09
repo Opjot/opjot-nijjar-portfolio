@@ -1,0 +1,35 @@
+$base-color:#3b8bc0;
+$text-color: white;
+$background-color: black;
+
+body{
+  background: $background-color;
+  position: relative;
+}
+
+html{
+  color: $text-color;
+  // z-index:100
+}
+
+canvas{
+    position: absolute;
+    top: 0;
+    z-index:-10
+  }
+
+  #skills, #projects{
+      padding:0 5rem
+  }
+
+  h3{
+      font-size: 3rem;
+      text-transform: uppercase;
+      text-decoration: underline $text-color;
+      background:$base-color;
+      opacity:0.8;
+      border-radius: 10rem;
+      width:fit-content;
+      padding:1rem;
+      margin:2rem 0
+  }
