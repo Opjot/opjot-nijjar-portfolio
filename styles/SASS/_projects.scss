@@ -3,7 +3,7 @@
     flex-direction: column;
 }
 
-.project{
+.qfp, .bingo, .willow{
     display:flex;
     flex-direction:row
 }
@@ -39,6 +39,7 @@ h4{
 display: flex;
 flex-direction: column;
 justify-content: center;
+padding:0 8rem 0 1rem;
 }
 
 .tools{
@@ -58,7 +59,16 @@ justify-content: center;
     border-radius:10rem;
     margin:0 1rem;
     background: $base-color;
+    border:0.2rem solid white
 }
 
+.opposite{
+    text-align: right;
+}
+
+.hp, .teamify{
+    display:flex;
+    flex-direction:row-reverse
+}
 
 

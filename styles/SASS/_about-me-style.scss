@@ -21,13 +21,10 @@
     display:flex;
     justify-content: center;
     padding-top:10rem
-    // align-content: center;
-    // justify-items: center;
-    // align-items: center;
 }
 
 .about-info{
-    padding:0 5rem 5rem;
+    padding:0 3rem 5rem;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -37,7 +34,8 @@
     background:$base-color;
     opacity:0.8;
     border-radius: 10rem;
-    padding:5rem 2rem 4rem
+    padding:4rem 3rem 4rem;
+    text-align:center;
 }
 
 .info-p p{

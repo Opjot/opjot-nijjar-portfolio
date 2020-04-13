@@ -1,0 +1,210 @@
+// put pic on top of about me section and resize h3 font
+// skills resize to make 2/3 fit next to each other
+// fix spacing in projects and pic size. unflex everything pic on top of explanation
+// remove medium from contact form anf remove h3 background color.
+
+@media(max-width:1120px){
+    .skill{
+        width: 15rem;
+        height: 10rem;
+    }
+
+    .knowledge{
+        margin: 5rem 0;
+    }
+}
+
+@media(max-width:1002px){
+    .portrait{
+        width:70%;
+        height:100%;
+    }
+
+    .about-pic{
+        padding-top:15rem
+    }
+
+    .about-info{
+        padding:0 2rem 5rem 3rem
+    }
+
+    .skill{
+        width: 15rem;
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-info{
+        padding: 2rem 2rem;
+    }
+
+    .phone{
+        right: 4rem;
+        top: 6rem;
+    }
+        
+        .project-buttons button{
+        font-size:1rem;
+        padding:0.7rem;
+        margin:0 1rem 0 0 ;
+    }
+}
+
+@media(max-width:916px){
+    .phone{
+    right: 3rem;
+    top: 7rem;
+    }
+    
+}
+
+@media(max-width:880px){
+    .skill{
+        width: 8rem;
+        height: 8rem;
+    }
+
+    i{
+        font-size:5rem
+    }
+
+    #projects{
+        padding: 0 2rem;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width:750px){
+    .about{
+        display:flex;
+        flex-direction:column-reverse;
+        flex-wrap: wrap;
+        margin-top:0rem;
+        align-items: center;
+    }
+
+    .about-pic, .about-info{
+        width:75%;
+    }
+
+    .landing{
+        height:65vh;
+    }
+
+    .about-pic{
+        display:flex;
+        justify-content: center;
+        padding-top:10rem
+    }
+
+    h3{
+        margin-top:5rem;
+    }
+
+    #skills{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .phone{
+        width:40%;
+        height:40%;
+        right: 3rem;
+        top: 4rem;
+    }
+
+    .laptop{
+        height:75%
+    }
+    
+    form{
+        width:75%
+    }
+}
+
+@media(max-width:641px){
+    #skills{padding:3rem}
+
+    .title{
+        margin-top:10rem
+    }
+
+    .project{
+        display:block
+    }
+
+    .project-info, .project-pics{
+        width:100%
+    }
+
+    .project-info{
+        padding: 0rem 2rem 2rem ;
+    }
+}
+
+@media(max-width:481px){
+    .skill{
+        width: 6rem;
+        height: 6rem;
+    }
+
+    i{
+        font-size:3rem
+    }
+
+    .info-p{
+        padding: 2rem 0rem 2rem;
+        border-radius: 3rem;
+    }
+
+    .about-info{
+        padding: 0 0 5rem 0;
+    }
+
+    .info-p p{
+        padding: 1rem 1rem;
+    }
+
+    h3{
+        font-size: 2rem;
+        padding:1rem 3rem
+    }
+
+    .title{
+        border-radius: 3rem;
+        width:100%;
+    }
+
+    .portrait{
+        border-radius: 3rem;
+    }
+
+    form{
+        width:80%
+    }
+
+    .phone{
+        right:2rem;
+        top:3rem
+    }
+
+    .project-buttons button {
+        // font-size: 0.95rem;
+        // padding: 0.21rem;
+        // border: 0.15rem solid white;
+    }
+}
+
+@media(max-width:356px){
+    .project-buttons button {
+        font-size: 0.95rem;
+        padding: 0.21rem;
+        border: 0.15rem solid white;
+    }
+}
+
