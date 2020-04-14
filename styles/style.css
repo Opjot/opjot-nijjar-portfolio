@@ -304,7 +304,7 @@ h3 {
   text-transform: uppercase;
   -webkit-text-decoration: underline white;
           text-decoration: underline white;
-  background: rgba(59, 139, 192, 0.8);
+  background: #3b8bc0;
   border-radius: 10rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -334,7 +334,7 @@ h3 {
 
 .title {
   text-align: center;
-  background: rgba(59, 139, 192, 0.8);
+  background: #3b8bc0;
   padding: 5rem 0;
   border-radius: 10rem;
   width: 60%;
@@ -342,8 +342,8 @@ h3 {
 }
 
 .title:hover {
-  border: 3px dotted rgba(59, 139, 192, 0.8);
-  color: rgba(59, 139, 192, 0.8);
+  border: 3px dotted #3b8bc0;
+  color: #3b8bc0;
   background: rgba(0, 0, 0, 0);
   -webkit-transition: ease-in-out 0.3s;
   transition: ease-in-out 0.3s;
@@ -381,7 +381,7 @@ body {
 
 #menuToggle a {
   text-decoration: none;
-  color: #232323;
+  color: black;
   -webkit-transition: color 0.4s ease;
   transition: color 0.4s ease;
 }
@@ -539,8 +539,7 @@ body {
 }
 
 .info-p {
-  background: rgba(59, 139, 192, 0.8);
-  opacity: 0.8;
+  background: #3b8bc0;
   border-radius: 10rem;
   padding: 4rem 3rem 4rem;
   text-align: center;
@@ -571,7 +570,7 @@ i {
 }
 
 .skill i:hover {
-  color: rgba(59, 139, 192, 0.8);
+  color: #3b8bc0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -616,8 +615,8 @@ li p {
 
 h4 {
   font-size: 2.5rem;
-  -webkit-text-decoration: underline rgba(59, 139, 192, 0.8);
-          text-decoration: underline rgba(59, 139, 192, 0.8);
+  -webkit-text-decoration: underline #3b8bc0;
+          text-decoration: underline #3b8bc0;
 }
 
 .laptop {
@@ -664,7 +663,7 @@ h4 {
 .tools {
   margin: 1rem 0  0;
   font-size: 1.5rem;
-  color: rgba(59, 139, 192, 0.8);
+  color: #3b8bc0;
 }
 
 .explanation {
@@ -677,7 +676,7 @@ h4 {
   padding: 1rem;
   border-radius: 10rem;
   margin: 0 1rem;
-  background: rgba(59, 139, 192, 0.8);
+  background: #3b8bc0;
   border: 0.2rem solid white;
 }
 
@@ -727,7 +726,7 @@ form {
   -ms-flex-line-pack: center;
       align-content: center;
   padding-top: 1rem;
-  background: rgba(59, 139, 192, 0.8);
+  background: #3b8bc0;
   margin-bottom: 2rem;
   border-radius: 5rem;
 }
@@ -743,7 +742,7 @@ form .links a i {
 }
 
 form .links a i:hover {
-  color: rgba(59, 139, 192, 0.8);
+  color: #3b8bc0;
   background: white;
 }
 
@@ -979,7 +978,7 @@ form h3 {
     top: 3rem;
   }
   .knowledge .skill i {
-    color: rgba(59, 139, 192, 0.8);
+    color: #3b8bc0;
   }
 }
 
