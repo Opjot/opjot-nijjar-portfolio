@@ -83,8 +83,9 @@
         display:flex;
         flex-direction:column-reverse;
         flex-wrap: wrap;
-        margin-top:0rem;
+        margin-top:8rem;
         align-items: center;
+
     }
 
     .about-pic, .about-info{
@@ -125,6 +126,8 @@
     form{
         width:75%
     }
+
+    
 }
 
 @media(max-width:641px){
@@ -178,6 +181,7 @@
     .title{
         border-radius: 3rem;
         width:100%;
+        padding:1rem
     }
 
     .portrait{
@@ -193,10 +197,8 @@
         top:3rem
     }
 
-    .project-buttons button {
-        // font-size: 0.95rem;
-        // padding: 0.21rem;
-        // border: 0.15rem solid white;
+    .knowledge .skill i{
+        color: $base-color;
     }
 }
 

@@ -277,6 +277,7 @@ header,
 footer {
   margin: 0;
   padding: 0;
+  font-family: 'Bitter', serif, sans-serif;
 }
 
 body {
@@ -303,8 +304,7 @@ h3 {
   text-transform: uppercase;
   -webkit-text-decoration: underline white;
           text-decoration: underline white;
-  background: #3b8bc0;
-  opacity: 0.8;
+  background: rgba(59, 139, 192, 0.8);
   border-radius: 10rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -334,7 +334,7 @@ h3 {
 
 .title {
   text-align: center;
-  background: #3b8bc0;
+  background: rgba(59, 139, 192, 0.8);
   padding: 5rem 0;
   border-radius: 10rem;
   width: 60%;
@@ -342,8 +342,8 @@ h3 {
 }
 
 .title:hover {
-  border: 3px dotted #3b8bc0;
-  color: #3b8bc0;
+  border: 3px dotted rgba(59, 139, 192, 0.8);
+  color: rgba(59, 139, 192, 0.8);
   background: rgba(0, 0, 0, 0);
   -webkit-transition: ease-in-out 0.3s;
   transition: ease-in-out 0.3s;
@@ -539,7 +539,7 @@ body {
 }
 
 .info-p {
-  background: #3b8bc0;
+  background: rgba(59, 139, 192, 0.8);
   opacity: 0.8;
   border-radius: 10rem;
   padding: 4rem 3rem 4rem;
@@ -571,7 +571,7 @@ i {
 }
 
 .skill i:hover {
-  color: #3b8bc0;
+  color: rgba(59, 139, 192, 0.8);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -616,8 +616,8 @@ li p {
 
 h4 {
   font-size: 2.5rem;
-  -webkit-text-decoration: underline #3b8bc0;
-          text-decoration: underline #3b8bc0;
+  -webkit-text-decoration: underline rgba(59, 139, 192, 0.8);
+          text-decoration: underline rgba(59, 139, 192, 0.8);
 }
 
 .laptop {
@@ -664,7 +664,7 @@ h4 {
 .tools {
   margin: 1rem 0  0;
   font-size: 1.5rem;
-  color: #3b8bc0;
+  color: rgba(59, 139, 192, 0.8);
 }
 
 .explanation {
@@ -677,7 +677,7 @@ h4 {
   padding: 1rem;
   border-radius: 10rem;
   margin: 0 1rem;
-  background: #3b8bc0;
+  background: rgba(59, 139, 192, 0.8);
   border: 0.2rem solid white;
 }
 
@@ -727,7 +727,7 @@ form {
   -ms-flex-line-pack: center;
       align-content: center;
   padding-top: 1rem;
-  background: #3b8bc0;
+  background: rgba(59, 139, 192, 0.8);
   margin-bottom: 2rem;
   border-radius: 5rem;
 }
@@ -743,7 +743,7 @@ form .links a i {
 }
 
 form .links a i:hover {
-  color: #3b8bc0;
+  color: rgba(59, 139, 192, 0.8);
   background: white;
 }
 
@@ -772,6 +772,7 @@ form p {
   border-radius: 10rem;
   margin: 1rem 0 2rem;
   background: white;
+  border: none;
 }
 
 .copyright {
@@ -873,7 +874,7 @@ form h3 {
             flex-direction: column-reverse;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-top: 0rem;
+    margin-top: 8rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -965,6 +966,7 @@ form h3 {
   .title {
     border-radius: 3rem;
     width: 100%;
+    padding: 1rem;
   }
   .portrait {
     border-radius: 3rem;
@@ -975,6 +977,9 @@ form h3 {
   .phone {
     right: 2rem;
     top: 3rem;
+  }
+  .knowledge .skill i {
+    color: rgba(59, 139, 192, 0.8);
   }
 }
 
