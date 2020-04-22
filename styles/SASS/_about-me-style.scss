@@ -19,8 +19,19 @@
 
 .about-pic{
     display:flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    padding-top:10rem
+    padding-top:3rem
+}
+
+.about-pic a button{
+    margin-top:4rem;
+    padding: 1rem 2rem;
+    border: 0.2rem solid white;
+    background:$base-color;
+    border-radius: 10rem;
+    color:$text-color;
 }
 
 .about-info{
@@ -41,3 +52,4 @@
     padding:1rem 0;
     font-size:1.2rem
 }
+

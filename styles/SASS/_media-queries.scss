@@ -195,6 +195,10 @@
     .knowledge .skill i{
         color: $base-color;
     }
+
+    .about-pic a button{
+        border-radius:2rem
+    }
 }
 
 @media(max-width:356px){
