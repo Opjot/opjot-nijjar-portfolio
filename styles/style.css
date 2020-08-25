@@ -700,7 +700,7 @@ h4 {
   text-align: right;
 }
 
-.hp, .teamify {
+.hp, .teamify, .email {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
